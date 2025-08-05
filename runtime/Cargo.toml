@@ -27,6 +27,8 @@ serde_json = { workspace = true, default-features = false, features = ["alloc"] 
 pallet-parachain-template.workspace = true
 polkadot-sdk = { workspace = true, features = ["cumulus-pallet-aura-ext", "cumulus-pallet-session-benchmarking", "cumulus-pallet-xcm", "cumulus-pallet-xcmp-queue", "cumulus-primitives-aura", "cumulus-primitives-core", "cumulus-primitives-storage-weight-reclaim", "cumulus-primitives-utility", "pallet-aura", "pallet-authorship", "pallet-balances", "pallet-collator-selection", "pallet-message-queue", "pallet-session", "pallet-sudo", "pallet-timestamp", "pallet-transaction-payment", "pallet-transaction-payment-rpc-runtime-api", "pallet-xcm", "parachains-common", "polkadot-parachain-primitives", "polkadot-runtime-common", "runtime", "staging-parachain-info", "staging-xcm", "staging-xcm-builder", "staging-xcm-executor"], default-features = false }
 cumulus-pallet-parachain-system.workspace = true
+pallet-utility = { version = "39.0.0", default-features = false }
+counter-pallet = { path = "../pallets/counter-pallet", default-features = false }
 
 [features]
 default = ["std"]
@@ -39,6 +41,8 @@ std = [
 	"scale-info/std",
 	"serde_json/std",
 	"substrate-wasm-builder",
+  "pallet-utility/std",
+  "counter-pallet/std",
 ]
 
 runtime-benchmarks = [

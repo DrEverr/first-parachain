@@ -9663,11 +9663,13 @@ dependencies = [
 name = "parachain-template-runtime"
 version = "0.1.0"
 dependencies = [
+ "counter-pallet",
  "cumulus-pallet-parachain-system",
  "docify",
  "hex-literal",
  "log",
  "pallet-parachain-template",
+ "pallet-utility",
  "parity-scale-codec",
  "polkadot-sdk",
  "scale-info",

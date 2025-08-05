@@ -307,6 +307,12 @@ mod runtime {
 	// Template
 	#[runtime::pallet_index(50)]
 	pub type TemplatePallet = pallet_parachain_template;
+	// Utility
+	#[runtime::pallet_index(51)]
+	pub type Utility = pallet_utility;
+	// Counter Pallet
+	#[runtime::pallet_index(52)]
+	pub type CounterPallet = counter_pallet;
 }
 
 #[docify::export(register_validate_block)]
